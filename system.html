@@ -3,40 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Владислав Чернышев (Touchline Project)" />
-  <meta name="description" content="TOUCHLINE™ — цифровые визитки и NFC-носители для бизнеса." />
-  <title>TOUCHLINE™ — цифровые визитки и NFC</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23ea580c%22 d=%22M50 3 60 37 94 50 60 60 50 97 40 60 6 50 40 37z%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23fff%22/%3E%3C/svg%3E" />
+  <title>TOUCHLINE — Умные цифровые визитки и NFC-носители</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header><div class="container"><a href="index.html" class="logo"><span class="logo-dot"></span>TOUCHLINE™</a></div></header>
-  <main class="container system-main">
-    <section class="system-hero">
-      <div class="pill">NFC И ЦИФРОВАЯ ИДЕНТИЧНОСТЬ</div>
-      <h1>Ваша визитка <span>остаётся в телефоне клиента</span></h1>
-      <p>Одно касание NFC-карты или скан QR-кода — и контакты, мессенджеры, сайт и портфолио открываются без установки приложения.</p>
-      <a href="tel:+79870891676" class="btn-main">Связаться: +7 987 089-16-76</a>
-    </section>
-    <section class="system-section">
-      <h2>Цифровая визитка вместо бумажной</h2>
-      <p>Контакты можно обновлять после печати QR-кода или выпуска NFC-карты. Клиенту достаточно одного сканирования или касания.</p>
-      <div class="system-grid">
-        <article class="system-card"><h3>Быстрый доступ</h3><p>QR-код открывает страницу в браузере на смартфоне. Никаких приложений для клиента.</p></article>
-        <article class="system-card"><h3>Контакты в одном месте</h3><p>Телефон, мессенджеры, сайт и портфолио собраны на персональной странице.</p></article>
-        <article class="system-card"><h3>QR и NFC</h3><p>Передавайте ссылку сканированием кода или касанием NFC-карты.</p></article>
+<body class="system-page">
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        TOUCHLINE
+      </a>
+      <div class="nav-actions">
+        <!-- ССЫЛКА ВХОДА НА ВАШ СЕРВЕР -->
+        <a href="https://ВАШ-СЕРВЕР.ru" class="btn-header">Вход в сервис</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ПЕРВЫЙ ЭКРАН: МАГНИТ -->
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="pill">NFC &amp; DIGITAL IDENTITY</div>
+        <h1>Бумажные визитки летят в урну. <span>Ваша — остаётся в телефоне клиента.</span></h1>
+        <p class="hero-sub">
+          Одно касание NFC-карты или скан QR-кода — и ваш номер, мессенджеры, сайт и портфолио сохранены в записной книжке партнёра за 1 секунду. Без установки приложений.
+        </p>
+
+        <div class="hero-cta-group">
+          <!-- ВЕДЕТ НА ВАШ СЕРВЕР (РЕГИСТРАЦИЯ / СОЗДАНИЕ) -->
+          <a href="https://ВАШ-СЕРВЕР.ru" class="btn-main">
+            Создать визитку
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contacts" class="btn-outline">Заказать NFC-карту</a>
+        </div>
+
+        <div class="hero-proof">
+          <span>✓ Работает на iOS и Android</span>
+          <span>✓ Мгновенное обновление данных</span>
+        </div>
+      </div>
+
+      <!-- ИНТЕРАКТИВНАЯ 3D КАРТА -->
+      <div class="card-stage">
+        <div class="nfc-card" id="nfcCard">
+          <div class="card-top">
+            <span class="card-brand">TOUCHLINE</span>
+            <svg class="nfc-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+              <line x1="12" y1="20" x2="12.01" y2="20"/>
+            </svg>
+          </div>
+          <div class="card-chip"></div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-owner">АЛЕКСАНДР СМИРНОВ</div>
+              <div class="card-role">Руководитель проектов • One-Tap Contact</div>
+            </div>
+            <div class="card-qr-mini">QR</div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="system-section">
-      <h2>Как начать</h2>
-      <div class="system-grid">
-        <article class="system-card"><h3>1. Подготовим страницу</h3><p>Соберём персональную визитку и настроим кнопки связи.</p></article>
-        <article class="system-card"><h3>2. Получите QR-код</h3><p>Разместите код на экране, печатных материалах или NFC-носителе.</p></article>
-        <article class="system-card"><h3>3. Обновляйте контакты</h3><p>Изменения в контактных данных можно запросить без перевыпуска QR-кода.</p></article>
+
+    <!-- БЛОК КОНТРАСТА -->
+    <section class="section">
+      <h2 class="section-title">Почему бизнес отказывается от картона</h2>
+      <p class="section-desc">Бумажная визитка требует от клиента ручного ввода цифр и почти всегда теряется. Touchline решает задачу за одно действие.</p>
+
+      <div class="compare-grid">
+        <div class="compare-card">
+          <div class="compare-head compare-head-negative">✕ Обычная бумага</div>
+          <ul class="compare-list">
+            <li>Заканчивается в самый ответственный момент на переговорах</li>
+            <li>Сменился телефон или должность — весь тираж в мусор</li>
+            <li>Клиенту лень перебивать номер вручную с картонки</li>
+            <li>Ноль аналитики: вы не знаете, открыли ли ваши контакты</li>
+          </ul>
+        </div>
+
+        <div class="compare-card pro">
+          <div class="compare-head compare-head-positive">✓ Система TOUCHLINE</div>
+          <ul class="compare-list">
+            <li>Вечный носитель: одна NFC-карта или стикер заменяет тысячи бумажек</li>
+            <li>Данные меняются в личном кабинете за 10 секунд без перевыпуска карты</li>
+            <li>Контакт сохраняется в телефонную книгу с фото и соцсетями в 1 клик</li>
+            <li>Статусный внешний вид, который запоминают с первой секунды</li>
+          </ul>
+        </div>
       </div>
-      <div class="system-actions"><a href="index.html" class="btn-main">Посмотреть кейс Денисова</a><a href="https://wa.me/79870891676" class="btn-main">WhatsApp</a></div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section class="section">
+      <h2 class="section-title">Запуск за 3 минуты</h2>
+      <p class="section-desc">Никаких сложных настроек и программирования.</p>
+
+      <div class="steps-grid">
+        <div class="step-box">
+          <div class="step-num">1</div>
+          <h3>Заполняете профиль</h3>
+          <p>Указываете телефон, Telegram, WhatsApp, почту, сайт и загружаете фото или логотип компании в личном кабинете.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">2</div>
+          <h3>Получаете носитель</h3>
+          <p>Используете персональный QR-код сразу с экрана телефона или заказываете фирменную матовую NFC-карту.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">3</div>
+          <h3>Передаёте контакты</h3>
+          <p>Подносите карту к смартфону клиента — на экране мгновенно открывается ваша визитка с кнопкой «Сохранить».</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФИНАЛЬНЫЙ ПРИЗЫВ И ПРЯМЫЕ КОНТАКТЫ -->
+    <section class="section" id="contacts">
+      <div class="cta-panel">
+        <h2>Готовы перейти на цифровой уровень?</h2>
+        <p>Запустите личную цифровую визитку прямо сейчас или свяжитесь с нами для заказа брендированных NFC-карт для себя и отдела продаж.</p>
+
+        <a href="https://ВАШ-СЕРВЕР.ru" class="btn-main">Перейти в личный кабинет</a>
+
+        <div class="direct-bar">
+          <!-- ПОЗВОНИТЬ -->
+          <a href="tel:+79000000000" class="direct-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Позвонить
+          </a>
+
+          <!-- НАПИСАТЬ (TELEGRAM) -->
+          <a href="https://t.me/ВАШ_НИК" target="_blank" rel="noopener" class="direct-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Написать в Telegram
+          </a>
+
+          <!-- СВЯЗАТЬСЯ (EMAIL) -->
+          <a href="mailto:ea52@bk.ru?subject=TOUCHLINE%20—%20Запрос" class="direct-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Связаться по почте
+          </a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer><div class="container"><div class="legal">© 2026 TOUCHLINE™ • Автор проекта: Владислав Чернышев</div><div class="footer-stack">Спроектировано в chearu-stack</div></div></footer>
+
+  <footer>
+    <div class="container">
+      TOUCHLINE • Цифровые визитки и NFC-решения для бизнеса
+    </div>
+  </footer>
+
+  <!-- СКРИПТ 3D НАКЛОНА КАРТЫ -->
+  <script>
+    const card = document.getElementById('nfcCard');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+
+      card.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+      card.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  </script>
 </body>
 </html>
