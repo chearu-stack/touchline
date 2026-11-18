@@ -1024,6 +1024,23 @@ body:not(.system-page) .order-links .btn-main:hover {
   box-shadow: 0 10px 28px rgba(234, 88, 12, 0.34), 0 16px 32px -13px rgba(251, 146, 60, 0.82);
 }
 
+body:not(.system-page) .qr-open-link {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 16px;
+  color: #fb923c;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration-color: rgba(251, 146, 60, 0.5);
+  text-underline-offset: 4px;
+}
+
+body:not(.system-page) .qr-open-link:hover,
+body:not(.system-page) .qr-open-link:focus-visible {
+  color: #fdba74;
+  text-decoration-color: currentColor;
+}
+
 @media (max-width: 480px) {
   body:not(.system-page) .ownership-box {
     margin-bottom: 42px;
