@@ -391,6 +391,16 @@
 .contact-qr .qr-img-wrap { margin-top: 4px; }
 .legal { line-height: 1.7; }
 .header-row { display: flex; justify-content: space-between; align-items: center; }
+.header-brand { display: flex; align-items: center; gap: 16px; }
+.project-preview-label {
+  padding-left: 16px;
+  border-left: 1px solid var(--border-accent);
+  color: #fb923c;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
 @media (max-width: 720px) {
   .system-hero { padding: 56px 0 44px; }
   .system-grid, .price-options { grid-template-columns: 1fr; }
@@ -403,15 +413,23 @@
 }
 
 @media (max-width: 480px) {
-  body:not(.system-page) .header-row { gap: 8px; }
+  body:not(.system-page) .header-row { position: relative; justify-content: center; gap: 8px; }
+  body:not(.system-page) .header-brand { flex-direction: column; gap: 6px; }
   body:not(.system-page) .logo {
     gap: 6px;
     font-size: 12px;
     letter-spacing: 0.08em;
     white-space: nowrap;
   }
+  body:not(.system-page) .project-preview-label {
+    padding: 0;
+    border: 0;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
   body:not(.system-page) .logo-dot { flex: 0 0 7px; width: 7px; height: 7px; }
-  body:not(.system-page) .stealth-link { flex: 0 0 14px; }
+  body:not(.system-page) .stealth-link { position: absolute; right: 0; flex: 0 0 14px; }
   body:not(.system-page) .order-links { flex-direction: column; align-items: center; gap: 10px; }
   body:not(.system-page) .order-links .btn-main {
     width: 100%;
